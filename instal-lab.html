@@ -1,144 +1,144 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INSTAL-LAB</title>
+    <title>INSTAL-LAB - Soluciones Integrales para Laboratorios</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            color: #2F4858;
-            background-color: #F8F9FA;
+            color: #333;
         }
-
-        .text-green-custom {
-            color: #2F4858;
+        .teal-bg {
+            background-color: #00796B;
         }
-
-        .bg-green-custom {
-            background-color: #315C5E;
+        .teal-text {
+            color: #00796B;
         }
-
-        .btn-custom {
-            background-color: #2F4858;
-            color: #fff;
-            padding: 0.75rem 2rem;
-            border-radius: 9999px;
-            font-weight: 600;
-            transition: all 0.3s ease;
+        .rating-stars svg {
+            fill: #FFD700;
         }
-
-        .btn-custom:hover {
-            background-color: #1a2a33;
-            transform: translateY(-2px);
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 0.75rem;
-            border-radius: 0.5rem;
-            border: 1px solid #d1d5db;
-            transition: all 0.2s ease;
-        }
-
-        .form-input:focus {
-            outline: none;
-            border-color: #2F4858;
-            box-shadow: 0 0 0 3px rgba(47, 72, 88, 0.2);
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .flex-col-reverse-md {
-                flex-direction: column-reverse;
-            }
+        /* Icono de WhatsApp para asegurar que se vea bien en todos los navegadores */
+        .whatsapp-icon {
+            fill: #25D366; /* WhatsApp green */
         }
     </style>
 </head>
+<body class="bg-gray-50">
 
-<body class="bg-gray-100">
-
-    <!-- Navbar -->
-    <header class="bg-green-custom text-white py-4 shadow-lg fixed w-full z-50">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <a href="#" class="flex items-center space-x-2">
-                <img src="https://placehold.co/40x40/ffffff/315C5E?text=IL" alt="INSTAL-LAB Logo" class="rounded-full">
-                <span class="text-xl font-bold">INSTAL-LAB</span>
-            </a>
-            <nav class="hidden md:flex space-x-6 text-lg font-semibold">
-                <a href="#about" class="hover:text-gray-300 transition-colors">Nosotros</a>
-                <a href="#services" class="hover:text-gray-300 transition-colors">Servicios</a>
-                <a href="#certifications" class="hover:text-gray-300 transition-colors">Certificaciones</a>
-                <a href="#projects" class="hover:text-gray-300 transition-colors">Proyectos</a>
-                <a href="#contact" class="hover:text-gray-300 transition-colors">Contacto</a>
-            </nav>
+    <!-- Header & Navigation -->
+    <header class="bg-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-6 py-4 flex flex-col items-center">
+            <!-- Logo and Name Section -->
+            <div class="mb-4">
+                <a href="#" class="flex flex-col items-center space-y-2">
+                    <img src="https://i.imgur.com/VTH60eu.jpeg" alt="Logo de INSTAL-LAB" class="h-16 w-auto rounded-full">
+                    <span class="text-2xl font-bold teal-text">INSTAL-LAB</span>
+                </a>
+            </div>
+            <!-- Navigation Links -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-600 hover:teal-text transition-colors duration-300">Nosotros</a>
+                <a href="#services" class="text-gray-600 hover:teal-text transition-colors duration-300">Servicios</a>
+                <a href="#certifications" class="text-gray-600 hover:teal-text transition-colors duration-300">Certificaciones</a>
+                <a href="#gallery" class="text-gray-600 hover:teal-text transition-colors duration-300">Galería</a>
+                <a href="#featured-projects" class="text-gray-600 hover:teal-text transition-colors duration-300">Proyectos</a>
+                <a href="#testimonials" class="text-gray-600 hover:teal-text transition-colors duration-300">Testimonios</a>
+                <a href="#blog" class="text-gray-600 hover:teal-text transition-colors duration-300">Blog</a>
+                <a href="#contact" class="text-gray-600 hover:teal-text transition-colors duration-300">Contacto</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:teal-text focus:outline-none absolute top-4 right-6">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2">
+            <a href="#about" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Nosotros</a>
+            <a href="#services" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Servicios</a>
+            <a href="#certifications" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Certificaciones</a>
+            <a href="#gallery" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Galería</a>
+            <a href="#featured-projects" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Proyectos Destacados</a>
+            <a href="#testimonials" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Testimonios</a>
+            <a href="#blog" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Blog</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Contacto</a>
         </div>
     </header>
 
-    <main class="pt-24">
-
+    <main>
         <!-- Hero Section -->
-        <section id="about" class="py-12 md:py-24 bg-cover bg-center flex items-center justify-center text-center"
-            style="background-image: url('https://placehold.co/1920x1080/E5E7EB/2F4858?text=INSTAL-LAB');">
-            <div class="container mx-auto px-6 text-white bg-black bg-opacity-50 p-8 rounded-xl shadow-lg">
-                <img src="https://placehold.co/100x100/ffffff/2F4858?text=IL" alt="INSTAL-LAB Logo"
-                    class="rounded-full mx-auto mb-6">
-                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Soluciones Integrales para
-                    Laboratorios</h1>
-                <p class="text-xl md:text-2xl font-light mb-8">Más de 10 años de experiencia técnica al servicio de tu
-                    proyecto.</p>
-                <a href="#contact" class="btn-custom inline-block">¡Cotiza tu proyecto!</a>
+        <section class="teal-bg text-white py-24 sm:py-32" style="background-image: url('https://i.imgur.com/R8u9oGg.png'); background-size: cover; background-position: center;">
+            <div class="container mx-auto px-6 text-center bg-black bg-opacity-40 rounded-xl p-8 max-w-2xl shadow-lg">
+                <h1 class="text-4xl sm:text-5xl font-bold mb-4">Soluciones Integrales para Laboratorios</h1>
+                <p class="text-lg sm:text-xl font-light mb-8">Más de 10 años de experiencia al servicio de las empresas más grandes de México.</p>
+                <a href="#contact" class="bg-white text-teal-600 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition-colors duration-300">
+                    Contáctanos
+                </a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="container mx-auto px-6 py-16 sm:py-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold teal-text">Acerca de INSTAL-LAB</h2>
+                <p class="mt-2 text-lg text-gray-600">Nuestro valor principal es la capacidad de ofrecer soluciones completas y personalizadas en un solo lugar.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://i.imgur.com/d4wRIrJ.png" alt="Imagen de INSTAL-LAB" class="rounded-xl shadow-lg w-full">
+                </div>
+                <div class="space-y-6">
+                    <p class="text-lg text-gray-700">
+                        Con más de 10 años de experiencia trabajando con empresas líderes como Coca-Cola, Bimbo y PEMEX, **INSTAL-LAB** ofrece un servicio integral que combina la experiencia técnica con la atención al detalle.
+                    </p>
+                    <p class="text-lg text-gray-700 font-bold">
+                        Nuestra meta es ser el socio de confianza preferido por grandes empresas para todas sus necesidades de equipamiento y mantenimiento de laboratorios, destacando por nuestra experiencia, profesionalismo y servicio integral.
+                    </p>
+                </div>
             </div>
         </section>
 
         <!-- Services Section -->
-        <section id="services" class="py-12 md:py-24 bg-white">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-green-custom">Nuestros Servicios</h2>
-                <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-12">Soluciones que garantizan la
-                    funcionalidad y seguridad de tus espacios de trabajo.</p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
+        <section id="services" class="bg-gray-100 py-16 sm:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold teal-text">Nuestros Servicios</h2>
+                    <p class="mt-2 text-lg text-gray-600">Soluciones que garantizan la funcionalidad y seguridad de tus espacios de trabajo.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Service Card 1 -->
-                    <div class="bg-gray-100 p-8 rounded-xl shadow-md transition-transform transform hover:scale-105">
-                        <img src="https://placehold.co/100x100/E5E7EB/2F4858?text=Muebles" alt="Venta de Muebles"
-                            class="mx-auto mb-4 rounded-xl">
-                        <h3 class="text-xl font-semibold mb-2 text-green-custom">Venta de Muebles y Equipos</h3>
-                        <ul class="text-left text-gray-600 space-y-2">
-                            <li>• Mesas de trabajo</li>
-                            <li>• Campanas de extracción</li>
-                            <li>• Muebles a medida y de uso específico</li>
-                            <li>• Accesorios como lavaojos y regaderas de emergencia</li>
+                    <div class="bg-white p-8 rounded-xl shadow-md transition-transform transform hover:scale-105 text-center">
+                         <img src="https://i.imgur.com/NbAhSBY.png" alt="Venta de equipos y mobiliario" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-bold mb-2">Venta de Muebles y Equipos</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1 text-left">
+                            <li>Mesas de trabajo, Campanas de extracción.</li>
+                            <li>Muebles a medida y de uso específico.</li>
+                            <li>Accesorios como lavaojos y regaderas de emergencia.</li>
+                            <li>Muebles para contenedores de inflamables, corrosivos y químicos.</li>
                         </ul>
                     </div>
-
                     <!-- Service Card 2 -->
-                    <div class="bg-gray-100 p-8 rounded-xl shadow-md transition-transform transform hover:scale-105">
-                        <img src="https://placehold.co/100x100/E5E7EB/2F4858?text=Instalación" alt="Instalación"
-                            class="mx-auto mb-4 rounded-xl">
-                        <h3 class="text-xl font-semibold mb-2 text-green-custom">Instalación de Equipo y Muebles</h3>
-                        <ul class="text-left text-gray-600 space-y-2">
-                            <li>• Instalación de mobiliario a nivel nacional</li>
-                            <li>• Conexión de motores, equipos y accesorios</li>
-                            <li>• Conexiones eléctricas, de gas, aire y agua</li>
-                            <li>• Respeto a las normas de seguridad y calidad del laboratorio</li>
+                    <div class="bg-white p-8 rounded-xl shadow-md transition-transform transform hover:scale-105 text-center">
+                        <img src="https://i.imgur.com/hREx9OU.png" alt="Instalación de equipo y muebles" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-bold mb-2">Instalación de Equipo y Muebles</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1 text-left">
+                            <li>Instalación de mobiliario a nivel nacional.</li>
+                            <li>Conexión de motores, equipos y accesorios.</li>
+                            <li>Conexiones eléctricas, de gas, aire y agua.</li>
+                            <li>Respeto a las normas de seguridad y calidad del laboratorio.</li>
                         </ul>
                     </div>
-
                     <!-- Service Card 3 -->
-                    <div class="bg-gray-100 p-8 rounded-xl shadow-md transition-transform transform hover:scale-105">
-                        <img src="https://placehold.co/100x100/E5E7EB/2F4858?text=Mantenimiento"
-                            alt="Mantenimiento" class="mx-auto mb-4 rounded-xl">
-                        <h3 class="text-xl font-semibold mb-2 text-green-custom">Obra Civil y Mantenimiento</h3>
-                        <ul class="text-left text-gray-600 space-y-2">
-                            <li>• Levantamiento con especificaciones</li>
-                            <li>• Distribución de servicios eléctricos, hidráulicos y neumáticos</li>
-                            <li>• Realización de guías mecánicas</li>
-                            <li>• Mantenimiento correctivo y preventivo</li>
+                    <div class="bg-white p-8 rounded-xl shadow-md transition-transform transform hover:scale-105 text-center">
+                        <img src="https://i.imgur.com/Mp6Die2.png" alt="Obra civil y mantenimiento" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-bold mb-2">Obra Civil y Mantenimiento</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1 text-left">
+                            <li>Levantamiento de especificaciones del proyecto.</li>
+                            <li>Distribución de servicios eléctricos, hidráulicos y neumáticos.</li>
+                            <li>Realización de guías mecánicas de servicios.</li>
+                            <li>Mantenimiento correctivo y preventivo.</li>
                         </ul>
                     </div>
                 </div>
@@ -146,154 +146,217 @@
         </section>
 
         <!-- Certifications Section -->
-        <section id="certifications" class="py-12 md:py-24 bg-gray-100">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-green-custom">Normas y Certificaciones</h2>
-                <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-12">Nuestro compromiso es garantizar la
-                    seguridad, funcionalidad y calidad, cumpliendo con las más altas regulaciones mexicanas e
-                    internacionales.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- NOM Card 1 -->
-                    <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
-                        <span class="text-4xl font-bold mb-2 text-green-custom">NOM-001</span>
-                        <p class="text-gray-600 text-center">Garantizamos que todas las instalaciones eléctricas
-                            cumplen con esta norma.</p>
-                    </div>
+        <section id="certifications" class="container mx-auto px-6 py-16 sm:py-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold teal-text">Normas y Certificaciones</h2>
+                <p class="mt-2 text-lg text-gray-600">Nuestro compromiso va más allá de la instalación.</p>
+            </div>
+            <div class="max-w-xl mx-auto">
+                <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                    <h3 class="text-2xl font-bold mb-4">Normas Mexicanas Obligatorias (NOM)</h3>
+                    <p class="text-gray-700 mb-4">Aseguramos que cada proyecto cumple con las más altas regulaciones mexicanas, garantizando la seguridad y funcionalidad.</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-600 text-left w-fit mx-auto">
+                        <li>**NOM-001-SEDE-2012:** Instalaciones eléctricas seguras.</li>
+                        <li>**NOM-010-STPS-2014:** Protección contra agentes químicos.</li>
+                        <li>**NOM-026-STPS-2008:** Señalización de seguridad en tuberías y equipos.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-                    <!-- NOM Card 2 -->
-                    <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
-                        <span class="text-4xl font-bold mb-2 text-green-custom">NOM-010</span>
-                        <p class="text-gray-600 text-center">Implementamos medidas para la manipulación y protección
-                            contra agentes químicos.</p>
-                    </div>
+        <!-- Gallery Section -->
+        <section id="gallery" class="bg-gray-100 py-16 sm:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold teal-text">Galería de Proyectos</h2>
+                    <p class="mt-2 text-lg text-gray-600">Un vistazo a nuestros trabajos previos.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <img src="https://i.imgur.com/W5o2ex4.jpeg" alt="Proyecto de INSTAL-LAB" class="w-full h-auto rounded-lg shadow-md hover:opacity-90 transition-opacity duration-300">
+                    <img src="https://i.imgur.com/ISOTsbA.jpeg" alt="Proyecto de INSTAL-LAB" class="w-full h-auto rounded-lg shadow-md hover:opacity-90 transition-opacity duration-300">
+                    <img src="https://i.imgur.com/DbOXveU.jpeg" alt="Proyecto de INSTAL-LAB" class="w-full h-auto rounded-lg shadow-md hover:opacity-90 transition-opacity duration-300">
+                    <img src="https://i.imgur.com/t34Xao4.jpeg" alt="Proyecto de INSTAL-LAB" class="w-full h-auto rounded-lg shadow-md hover:opacity-90 transition-opacity duration-300">
+                    <img src="https://i.imgur.com/0Uv4XiX.jpeg" alt="Proyecto de INSTAL-LAB" class="w-full h-auto rounded-lg shadow-md hover:opacity-90 transition-opacity duration-300">
+                    <img src="https://i.imgur.com/B9SokUu.jpeg" alt="Proyecto de INSTAL-LAB" class="w-full h-auto rounded-lg shadow-md hover:opacity-90 transition-opacity duration-300">
+                    <img src="https://i.imgur.com/IcS0rSY.png" alt="Proyecto de INSTAL-LAB" class="w-full h-auto rounded-lg shadow-md hover:opacity-90 transition-opacity duration-300">
+                    <img src="https://i.imgur.com/xpOFybw.jpeg" alt="Proyecto de INSTAL-LAB" class="w-full h-auto rounded-lg shadow-md hover:opacity-90 transition-opacity duration-300">
+                    <img src="https://i.imgur.com/Rghn8Jl.png" alt="Proyecto de INSTAL-LAB" class="w-full h-auto rounded-lg shadow-md hover:opacity-90 transition-opacity duration-300">
+                    <img src="https://i.imgur.com/6qe6fJX.png" alt="Proyecto de INSTAL-LAB" class="w-full h-auto rounded-lg shadow-md hover:opacity-90 transition-opacity duration-300">
+                    <img src="https://i.imgur.com/C9ndYmU.jpeg" alt="Proyecto de INSTAL-LAB" class="w-full h-auto rounded-lg shadow-md hover:opacity-90 transition-opacity duration-300">
+                </div>
+            </div>
+        </section>
 
-                    <!-- ISO Card 1 -->
-                    <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
-                        <span class="text-4xl font-bold mb-2 text-green-custom">ISO 9001</span>
-                        <p class="text-gray-600 text-center">Nuestros procesos se guían por este estándar de gestión de
-                            calidad.</p>
+        <!-- Featured Projects Section -->
+        <section id="featured-projects" class="container mx-auto px-6 py-16 sm:py-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold teal-text">Proyectos Destacados</h2>
+                <p class="mt-2 text-lg text-gray-600">Conoce el impacto de nuestro trabajo en proyectos de gran escala.</p>
+            </div>
+            <div class="max-w-3xl mx-auto bg-gray-100 p-8 rounded-xl shadow-lg">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <img src="https://i.imgur.com/eg7xMmK.png" alt="Interior del laboratorio de la Refinería Dos Bocas" class="w-full h-auto rounded-lg shadow-md">
                     </div>
-
-                    <!-- ISO Card 2 -->
-                    <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
-                        <span class="text-4xl font-bold mb-2 text-green-custom">ISO 17025</span>
-                        <p class="text-gray-600 text-center">Facilitamos el proceso de acreditación para tu
-                            laboratorio.</p>
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-bold teal-text">Refinería Olmeca (Dos Bocas)</h3>
+                        <p class="text-gray-700">INSTAL-LAB fue el único encargado de la **instalación completa del mobiliario y equipo** para los laboratorios de la nueva refinería de Pemex. Este proyecto de gran envergadura demuestra nuestra capacidad para manejar operaciones complejas y asegurar el cumplimiento de las más estrictas normativas de seguridad y calidad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="bg-gray-100 py-16 sm:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold teal-text">Testimonios</h2>
+                    <p class="mt-2 text-lg text-gray-600">Lo que nuestros clientes dicen sobre nosotros.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial Card 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <p class="text-gray-700 italic mb-4">"El equipo de INSTAL-LAB fue increíblemente profesional y eficiente. La calidad de la instalación superó nuestras expectativas. ¡Muy recomendados!"</p>
+                        <div class="flex items-center space-x-3">
+                            <img src="https://placehold.co/60x60/d1d5db/4b5563?text=A.M." alt="Imagen de perfil" class="rounded-full">
+                            <div>
+                                <p class="font-bold">Ana Morales</p>
+                                <p class="text-sm text-gray-500">Gerente de Laboratorio, PharmaTech</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial Card 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <p class="text-gray-700 italic mb-4">"Necesitábamos una solución integral y rápida para nuestro nuevo laboratorio. INSTAL-LAB nos lo dio todo en un solo paquete, sin complicaciones. Su profesionalismo es de primera."</p>
+                        <div class="flex items-center space-x-3">
+                            <img src="https://placehold.co/60x60/d1d5db/4b5563?text=J.R." alt="Imagen de perfil" class="rounded-full">
+                            <div>
+                                <p class="font-bold">Juan Ramírez</p>
+                                <p class="text-sm text-gray-500">Director de Operaciones, QUIMIPRO S.A. de C.V.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial Card 3 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <p class="text-gray-700 italic mb-4">"Desde la planeación hasta el mantenimiento, el equipo de INSTAL-LAB demostró un conocimiento técnico profundo. Nos ayudaron a cumplir con todas las normas de seguridad. Un socio indispensable."</p>
+                        <div class="flex items-center space-x-3">
+                            <img src="https://placehold.co/60x60/d1d5db/4b5563?text=S.C." alt="Imagen de perfil" class="rounded-full">
+                            <div>
+                                <p class="font-bold">Sofía Castro</p>
+                                <p class="text-sm text-gray-500">Coordinadora de Proyectos, BioSolutions</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="py-12 md:py-24 bg-white">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-green-custom">Proyectos Recientes</h2>
-                <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-12">Echa un vistazo a algunos de nuestros
-                    trabajos más destacados.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project Card 1 -->
-                    <div class="bg-gray-100 rounded-xl shadow-md overflow-hidden">
-                        <img src="https://placehold.co/600x400/E5E7EB/2F4858?text=Proyecto+1" alt="Proyecto 1"
-                            class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="font-bold text-xl mb-2 text-green-custom">Laboratorio de Coca-Cola</h3>
-                            <p class="text-gray-600">Instalación completa de mobiliario y sistemas de extracción.</p>
-                        </div>
+        <!-- Blog Section -->
+        <section id="blog" class="bg-gray-100 py-16 sm:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold teal-text">Nuestro Blog</h2>
+                    <p class="mt-2 text-lg text-gray-600">Mantente al día con las últimas tendencias en equipamiento de laboratorio.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Blog Post 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                        <h3 class="text-xl font-bold mb-2">La importancia del mobiliario de laboratorio a medida</h3>
+                        <p class="text-gray-600 text-sm mb-4">Publicado el 15 de septiembre de 2025</p>
+                        <p class="text-gray-700 mb-4">El mobiliario de laboratorio no es solo un conjunto de mesas y estanterías; es un componente crítico para la eficiencia, la seguridad y la funcionalidad de cualquier espacio de trabajo científico. El mobiliario a medida, en particular, ofrece ventajas significativas al adaptarse a las necesidades específicas de tu equipo y procesos. Desde optimizar el flujo de trabajo hasta integrar tecnologías avanzadas, los muebles personalizados son una inversión estratégica para el éxito de tus operaciones. En INSTAL-LAB, diseñamos y fabricamos soluciones de mobiliario que no solo cumplen con los más altos estándares de calidad, sino que también mejoran la ergonomía y la seguridad de tu personal, permitiéndoles trabajar de manera más eficiente y con menos riesgos.</p>
                     </div>
-
-                    <!-- Project Card 2 -->
-                    <div class="bg-gray-100 rounded-xl shadow-md overflow-hidden">
-                        <img src="https://placehold.co/600x400/E5E7EB/2F4858?text=Proyecto+2" alt="Proyecto 2"
-                            class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="font-bold text-xl mb-2 text-green-custom">Planta de Bimbo</h3>
-                            <p class="text-gray-600">Modernización y mantenimiento de equipos de laboratorio.</p>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 3 -->
-                    <div class="bg-gray-100 rounded-xl shadow-md overflow-hidden">
-                        <img src="https://placehold.co/600x400/E5E7EB/2F4858?text=Proyecto+3" alt="Proyecto 3"
-                            class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="font-bold text-xl mb-2 text-green-custom">Mantenimiento de PEMEX</h3>
-                            <p class="text-gray-600">Servicios de mantenimiento y obra civil en laboratorios.</p>
-                        </div>
+                    <!-- Blog Post 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                        <h3 class="text-xl font-bold mb-2">Normas de seguridad en laboratorios: lo que necesitas saber</h3>
+                        <p class="text-gray-600 text-sm mb-4">Publicado el 1 de septiembre de 2025</p>
+                        <p class="text-gray-700 mb-4">La seguridad en el laboratorio es innegociable. Cumplir con las regulaciones mexicanas (NOM) y los estándares internacionales (ISO) no solo te protege de multas, sino que también garantiza un entorno de trabajo seguro para todos. Normas como la NOM-001-SEDE-2012 para instalaciones eléctricas y la NOM-010-STPS-2014 para la protección contra agentes químicos son vitales. En INSTAL-LAB, nuestro proceso de instalación y mantenimiento está rigurosamente alineado con estas normas. Nuestro conocimiento de la norma ISO 17025, además, asegura que la infraestructura de tu laboratorio facilita el proceso de acreditación, demostrando tu compromiso con la calidad y la excelencia.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-12 md:py-24 bg-gray-100">
-            <div class="container mx-auto px-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <!-- Contact Info -->
-                    <div class="space-y-6">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-green-custom">Información de Contacto</h2>
-                        <div class="flex items-center space-x-3 text-lg md:text-xl text-gray-700">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="w-6 h-6 text-green-custom">
-                                <path
-                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                                </path>
-                            </svg>
+        <section id="contact" class="container mx-auto px-6 py-16 sm:py-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold teal-text">Información de Contacto</h2>
+                <div class="mt-4 text-center space-y-4">
+                    <p class="text-lg text-gray-700 flex items-center justify-center space-x-2">
+                        <!-- Whatsapp Icon -->
+                        <svg class="h-6 w-6 whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12.001 0c-6.627 0-12 5.373-12 12s5.373 12 12 12c6.628 0 12-5.373 12-12s-5.372-12-12-12zm.001 19.349c-1.522 0-2.617-.463-3.702-.924-1.085-.461-1.631-.692-2.176-1.153l.363-.84c.338-.282.721-.527 1.104-.772l.487-.27c.414.23.829.46 1.243.69l.74.41c.216.12.45.196.68.219l.216.022c.24.032.484.048.728.048.423 0 .847-.058 1.27-.174.423-.116.828-.291 1.218-.521.39-.23.738-.506 1.044-.828.306-.322.56-.693.76-.983.2-.29.35-.615.45-.975.099-.36.149-.75.149-1.17 0-.42-.046-.838-.138-1.254-.092-.415-.22-.795-.385-1.14-.165-.345-.37-.66-.615-.945-.245-.285-.53-.53-.855-.735-.325-.205-.69-.368-1.1-.49-.41-.122-.85-.183-1.32-.183-.47 0-.94.062-1.396.185-.456.123-.87.306-1.243.55-.373.244-.712.527-1.017.85l-.265.28c-.14.15-.27.28-.39.39-.265.23-.52.41-.765.54-.245.13-.5.21-.765.24-.265.03-.54.015-.82-.045l-.76-.18c-.28-.06-.55-.16-.81-.29l-.79-.35c-.26-.11-.47-.26-.63-.44-.16-.18-.28-.39-.36-.63-.08-.24-.12-.5-.12-.78v-.13c0-.28.04-.54.12-.78.08-.24.19-.46.33-.66.14-.2.3-.37.49-.51.19-.14.4-.24.63-.3.23-.06.46-.08.69-.06.23.02.43.1.62.24l.58.4c.48.33.91.68 1.29 1.05.38.37.71.77.99 1.2.28.43.51.87.69 1.33.18.46.27.93.27 1.41 0 .44-.06.88-.18 1.31-.12.43-.29.83-.51 1.2-.22.37-.48.69-.78 1.08-.3.39-.62.75-.95 1.08-.33.33-.68.61-1.05.84l-.84.44c-.37.23-.74.39-1.11.48-.37.09-.74.12-1.11.09l-.49-.03c-.22-.01-.44-.04-.66-.08l-.55-.09c-.22-.05-.44-.11-.66-.18l-.55-.16c-.22-.07-.42-.16-.6-.27-.18-.11-.34-.23-.48-.37-.14-.14-.26-.28-.37-.43-.11-.15-.2-.29-.27-.42l-.24-.49c-.11-.2-.17-.4-.18-.6l-.01-.3c.01-.2.06-.39.15-.57.09-.18.2-.33.34-.47.14-.14.29-.24.45-.33.16-.09.32-.14.48-.15.22-.01.44.02.66.08.22.06.43.15.63.29.2.14.39.32.57.54.18.22.33.48.46.78.13.3.22.62.27.96.05.34.07.68.04 1.02l-.04.34c-.03.32-.1.64-.21.96-.11.32-.26.63-.45.92-.19.29-.41.56-.66.8-.25.24-.52.45-.82.63l-.78.47c-.24.14-.49.26-.75.36l-.8.29c-.26.08-.5.12-.73.12l-.24.01c-.2.01-.4.01-.6-.01l-1.07-.15c-.46-.07-.84-.21-1.14-.42l-.26-.17c-.12-.08-.22-.16-.3-.24s-.15-.15-.2-.23c-.05-.08-.09-.15-.12-.23-.03-.08-.05-.16-.06-.23-.01-.07-.02-.15-.02-.23v-.03c0-.08.01-.16.03-.24.02-.08.05-.15.09-.22l.14-.25c.14-.28.29-.53.46-.77.17-.24.35-.45.54-.64.19-.19.38-.34.57-.45.19-.11.38-.18.57-.21l.48-.09c.26-.04.53-.02.79.06.26.08.52.2.78.36l.78.52c.26.16.53.38.79.66.26.28.51.6.76.96.25.36.48.75.69 1.17.21.42.38.86.51 1.33.13.47.2 1.06.2 1.77 0 .54-.06 1.08-.18 1.62-.12.54-.29 1.05-.51 1.53-.22.48-.48.9-.78 1.26-.3.36-.62.66-.96.9-.34.24-.7.42-1.08.54-.38.12-.78.18-1.2.18-.4 0-.8-.06-1.2-.18-.4-.12-.78-.3-.93-.45l-.47-.48c-.28-.29-.55-.6-.8-.94-.25-.34-.47-.7-.66-1.08-.19-.38-.34-.78-.45-1.2-.11-.42-.16-.85-.16-1.3-.01-1.19.46-2.27 1.39-3.24.93-.97 2.1-1.76 3.52-2.37l.21-.09c.47-.2.95-.33 1.45-.4.5-.07 1-.06 1.5-.03.49.03.96.13 1.41.3.45.17.88.39 1.28.67l1.09.77c.3.21.57.45.81.71.24.26.43.54.57.84l.21.4c.14.3.24.61.3.92.06.31.08.63.06.95l-.03.33c-.02.32-.07.64-.15.96-.08.32-.19.62-.33.91l-.81 1.34c-.21.36-.44.7-.69 1.01-.25.31-.52.59-.8.84-.28.25-.58.46-.89.64-.31.18-.65.31-.99.41l-.8.19c-.2.05-.4.07-.6.07-.33 0-.67-.09-1.01-.27-.34-.18-.64-.42-.9-.71-.26-.29-.46-.64-.6-1.05-.14-.41-.21-.84-.21-1.29z"/>
+                        </svg>
+                        <a href="https://wa.me/522871252793?text=Hola%2C%20estoy%20interesado%20en%20los%20servicios%20de%20INSTAL-LAB" target="_blank" rel="noopener noreferrer">
                             <span>(28) 7125 2793</span>
-                        </div>
-                        <div class="flex items-center space-x-3 text-lg md:text-xl text-gray-700">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="w-6 h-6 text-green-custom">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                                </path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                            <span>instalabmx@gmail.com</span>
-                        </div>
-                        <a href="https://www.facebook.com/instal.lab/" target="_blank"
-                            class="btn-custom inline-block mt-4">Visita nuestra página de Facebook</a>
+                        </a>
+                    </p>
+                    <p class="text-lg text-gray-700 flex items-center justify-center space-x-2">
+                        <!-- Email Icon -->
+                        <svg class="h-6 w-6 teal-text" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M22 6.075a.75.75 0 00-.75-.75H2.75A.75.75 0 002 6.075v11.85A.75.75 0 002.75 19h18.5a.75.75 0 00.75-.75V6.075zM20.5 6.81l-8 5.75L4.5 6.81V6.5h16v.31zM3.5 17.25V7.47l7.85 5.64a.75.75 0 00.8 0L20.5 7.47v9.78H3.5z"/>
+                        </svg>
+                        <span>instalabmx@gmail.com</span>
+                    </p>
+                    <a href="https://www.facebook.com/instalab" target="_blank" class="inline-block mt-4 text-white bg-blue-600 font-semibold py-2 px-6 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300">
+                        Visita nuestra página de Facebook
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mb-12 mt-12">
+                <h2 class="text-3xl font-bold teal-text">¡Conversemos sobre tu proyecto!</h2>
+                <p class="mt-2 text-lg text-gray-600">Completa el formulario para iniciar una conversación sobre tu proyecto. Esto nos permite entender mejor tus necesidades y prepararnos para la llamada.</p>
+            </div>
+            <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+                <form id="contact-form" action="https://formspree.io/f/movnzwao" method="POST" class="space-y-6">
+                    <div>
+                        <label for="company" class="block text-sm font-medium text-gray-700">Nombre de la Empresa</label>
+                        <input type="text" id="company" name="company" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-teal-500 focus:ring-teal-500" required>
                     </div>
-                    <!-- Contact Form -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg">
-                        <h3 class="text-2xl md:text-3xl font-bold mb-4 text-center text-green-custom">¡Conversemos sobre
-                            tu proyecto!</h3>
-                        <p class="text-center text-gray-600 mb-6">Completa el formulario para iniciar una conversación
-                            sobre tu proyecto. Esto nos permite entender mejor tus necesidades y prepararnos para la
-                            llamada.</p>
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Nombre del Contacto</label>
+                        <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-teal-500 focus:ring-teal-500" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-teal-500 focus:ring-teal-500" required>
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700">Teléfono</label>
+                        <input type="tel" id="phone" name="phone" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-teal-500 focus:ring-teal-500" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Describe tu proyecto</label>
+                        <textarea id="message" name="message" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-teal-500 focus:ring-teal-500" required></textarea>
+                    </div>
+                    <!-- Hidden field to send a reply-to address -->
+                    <input type="hidden" name="_replyto" id="_replyto">
+                    <div>
+                        <button type="submit" class="w-full teal-bg text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-teal-700 transition-colors duration-300">
+                            Enviar Mensaje
+                        </button>
+                    </div>
+                </form>
+                <div id="form-status" class="mt-4 text-center text-sm font-medium" style="display:none;"></div>
+            </div>
+        </section>
 
-                        <form id="contact-form" action="https://formspree.io/f/{{formspree-id}}" method="POST"
-                            class="space-y-4">
-                            <!-- Hidden input to send a reply to address -->
-                            <input type="hidden" name="_replyto">
-
-                            <div>
-                                <label for="company" class="block text-sm font-medium text-gray-700">Nombre de la
-                                    Empresa</label>
-                                <input type="text" id="company" name="company" class="form-input" required>
-                            </div>
-                            <div>
-                                <label for="name" class="block text-sm font-medium text-gray-700">Nombre del
-                                    Contacto</label>
-                                <input type="text" id="name" name="name" class="form-input" required>
-                            </div>
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-gray-700">Correo
-                                    Electrónico</label>
-                                <input type="email" id="email" name="email" class="form-input" required>
-                            </div>
-                            <div>
-                                <label for="phone" class="block text-sm font-medium text-gray-700">Teléfono</label>
-                                <input type="tel" id="phone" name="phone" class="form-input" required>
-                            </div>
-                            <div>
-                                <label for="message" class="block text-sm font-medium text-gray-700">Describe tu
-                                    proyecto</label>
-                                <textarea id="message" name="message" rows="4" class="form-input" required></textarea>
-                            </div>
-                            <button type="submit" class="w-full btn-custom">Enviar Mensaje</button>
-                        </form>
-                        <p id="form-status" class="mt-4 text-center font-semibold"></p>
+        <!-- Rating Section (Static) -->
+        <section class="bg-gray-200 py-16 sm:py-24">
+            <div class="container mx-auto px-6 text-center">
+                <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+                    <h2 class="text-3xl font-bold teal-text mb-2">Califica Nuestra Página</h2>
+                    <p class="text-lg text-gray-600 mb-6">Ayúdanos a saber qué tan útil y agradable te resulta nuestra página. ¡Tu calificación nos impulsa a mejorar!</p>
+                    <div class="flex flex-col items-center">
+                        <div class="text-5xl font-bold teal-text mb-2">5/5</div>
+                        <div class="rating-stars flex justify-center mb-4">
+                            <!-- Static Stars for Visual Effect -->
+                            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
+                            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
+                            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
+                            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
+                            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4">Basado en 5 calificaciones iniciales</p>
                     </div>
                 </div>
             </div>
@@ -301,79 +364,64 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-green-custom text-white py-8">
+    <footer class="teal-bg text-white py-8">
         <div class="container mx-auto px-6 text-center">
-            <div class="md:flex md:justify-between items-center mb-6">
-                <nav class="flex justify-center md:justify-start space-x-6 text-sm md:text-base mb-4 md:mb-0">
-                    <a href="#about" class="hover:text-gray-300">Nosotros</a>
-                    <a href="#services" class="hover:text-gray-300">Servicios</a>
-                    <a href="#certifications" class="hover:text-gray-300">Certificaciones</a>
-                    <a href="#contact" class="hover:text-gray-300">Contacto</a>
-                </nav>
-                <div class="text-center md:text-right text-sm">
-                    <p>José Francisco Herrera | Técnico Especialista en Instalaciones</p>
-                    <p>Tel: (28) 7125 2793 | Correo: instalabmx@gmail.com</p>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 pt-6 text-sm">
-                <p>&copy; 2025 INSTAL-LAB. Todos los derechos reservados.</p>
-            </div>
+            <p class="text-sm font-light">&copy; <span id="year"></span> INSTAL-LAB. Todos los derechos reservados.</p>
         </div>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const form = document.getElementById('contact-form');
-            const formStatus = document.getElementById('form-status');
-            const formspreeId = form.action.split('/').pop();
+        // Set current year for the footer
+        document.getElementById('year').textContent = new Date().getFullYear();
 
-            form.addEventListener('submit', async (event) => {
-                event.preventDefault();
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Formspree integration
+        const form = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const emailInput = document.getElementById('email');
+            const replyToInput = document.getElementById('_replyto');
+            replyToInput.value = emailInput.value;
+
+            const data = new FormData(event.target);
+            try {
+                formStatus.style.display = 'block';
                 formStatus.textContent = 'Enviando...';
-                formStatus.style.color = '#315C5E';
-
-                try {
-                    const formData = new FormData(form);
-                    const response = await fetch(form.action, {
-                        method: 'POST',
-                        headers: {
-                            'Accept': 'application/json'
-                        },
-                        body: formData
-                    });
-
-                    if (response.ok) {
-                        formStatus.textContent = '¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.';
-                        formStatus.style.color = 'green';
-                        form.reset();
-                    } else {
-                        const data = await response.json();
-                        if (Object.hasOwn(data, 'errors')) {
-                            const errorMessages = data.errors.map(error => error.message).join(', ');
-                            formStatus.textContent = `Hubo un problema. Por favor, revisa tu conexión e intenta de nuevo.`;
-                        } else {
-                            formStatus.textContent = 'Hubo un error de red. Por favor, revisa tu conexión e intenta de nuevo.';
-                        }
-                        formStatus.style.color = 'red';
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
                     }
-                } catch (error) {
-                    formStatus.textContent = 'Hubo un error de red. Por favor, revisa tu conexión e intenta de nuevo.';
-                    formStatus.style.color = 'red';
-                    console.error('Error submitting form:', error);
-                }
-            });
-
-            // Handle smooth scrolling for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
                 });
-            });
+                if (response.ok) {
+                    formStatus.textContent = "¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.";
+                    formStatus.style.color = '#00796B';
+                    form.reset();
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            formStatus.textContent = data["errors"].map(error => error["message"]).join(", ");
+                        } else {
+                            formStatus.textContent = "Hubo un problema. Por favor, intenta de nuevo.";
+                        }
+                    });
+                    formStatus.style.color = 'red';
+                }
+            } catch (error) {
+                formStatus.textContent = "Hubo un error de red. Por favor, verifica tu conexión e intenta de nuevo.";
+                formStatus.style.color = 'red';
+            }
         });
     </script>
 </body>
-
 </html>
