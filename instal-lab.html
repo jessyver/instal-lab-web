@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSTAL-LAB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #2F4858;
+            background-color: #F8F9FA;
+        }
+
+        .text-green-custom {
+            color: #2F4858;
+        }
+
+        .bg-green-custom {
+            background-color: #315C5E;
+        }
+
+        .btn-custom {
+            background-color: #2F4858;
+            color: #fff;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #1a2a33;
+            transform: translateY(-2px);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            border: 1px solid #d1d5db;
+            transition: all 0.2s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #2F4858;
+            box-shadow: 0 0 0 3px rgba(47, 72, 88, 0.2);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .flex-col-reverse-md {
+                flex-direction: column-reverse;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <header class="bg-green-custom text-white py-4 shadow-lg fixed w-full z-50">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <img src="https://placehold.co/40x40/ffffff/315C5E?text=IL" alt="INSTAL-LAB Logo" class="rounded-full">
+                <span class="text-xl font-bold">INSTAL-LAB</span>
+            </a>
+            <nav class="hidden md:flex space-x-6 text-lg font-semibold">
+                <a href="#about" class="hover:text-gray-300 transition-colors">Nosotros</a>
+                <a href="#services" class="hover:text-gray-300 transition-colors">Servicios</a>
+                <a href="#certifications" class="hover:text-gray-300 transition-colors">Certificaciones</a>
+                <a href="#projects" class="hover:text-gray-300 transition-colors">Proyectos</a>
+                <a href="#contact" class="hover:text-gray-300 transition-colors">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-24">
+
+        <!-- Hero Section -->
+        <section id="about" class="py-12 md:py-24 bg-cover bg-center flex items-center justify-center text-center"
+            style="background-image: url('https://placehold.co/1920x1080/E5E7EB/2F4858?text=INSTAL-LAB');">
+            <div class="container mx-auto px-6 text-white bg-black bg-opacity-50 p-8 rounded-xl shadow-lg">
+                <img src="https://placehold.co/100x100/ffffff/2F4858?text=IL" alt="INSTAL-LAB Logo"
+                    class="rounded-full mx-auto mb-6">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Soluciones Integrales para
+                    Laboratorios</h1>
+                <p class="text-xl md:text-2xl font-light mb-8">Más de 10 años de experiencia técnica al servicio de tu
+                    proyecto.</p>
+                <a href="#contact" class="btn-custom inline-block">¡Cotiza tu proyecto!</a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-12 md:py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-green-custom">Nuestros Servicios</h2>
+                <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-12">Soluciones que garantizan la
+                    funcionalidad y seguridad de tus espacios de trabajo.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <!-- Service Card 1 -->
+                    <div class="bg-gray-100 p-8 rounded-xl shadow-md transition-transform transform hover:scale-105">
+                        <img src="https://placehold.co/100x100/E5E7EB/2F4858?text=Muebles" alt="Venta de Muebles"
+                            class="mx-auto mb-4 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-2 text-green-custom">Venta de Muebles y Equipos</h3>
+                        <ul class="text-left text-gray-600 space-y-2">
+                            <li>• Mesas de trabajo</li>
+                            <li>• Campanas de extracción</li>
+                            <li>• Muebles a medida y de uso específico</li>
+                            <li>• Accesorios como lavaojos y regaderas de emergencia</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="bg-gray-100 p-8 rounded-xl shadow-md transition-transform transform hover:scale-105">
+                        <img src="https://placehold.co/100x100/E5E7EB/2F4858?text=Instalación" alt="Instalación"
+                            class="mx-auto mb-4 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-2 text-green-custom">Instalación de Equipo y Muebles</h3>
+                        <ul class="text-left text-gray-600 space-y-2">
+                            <li>• Instalación de mobiliario a nivel nacional</li>
+                            <li>• Conexión de motores, equipos y accesorios</li>
+                            <li>• Conexiones eléctricas, de gas, aire y agua</li>
+                            <li>• Respeto a las normas de seguridad y calidad del laboratorio</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div class="bg-gray-100 p-8 rounded-xl shadow-md transition-transform transform hover:scale-105">
+                        <img src="https://placehold.co/100x100/E5E7EB/2F4858?text=Mantenimiento"
+                            alt="Mantenimiento" class="mx-auto mb-4 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-2 text-green-custom">Obra Civil y Mantenimiento</h3>
+                        <ul class="text-left text-gray-600 space-y-2">
+                            <li>• Levantamiento con especificaciones</li>
+                            <li>• Distribución de servicios eléctricos, hidráulicos y neumáticos</li>
+                            <li>• Realización de guías mecánicas</li>
+                            <li>• Mantenimiento correctivo y preventivo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="py-12 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-green-custom">Normas y Certificaciones</h2>
+                <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-12">Nuestro compromiso es garantizar la
+                    seguridad, funcionalidad y calidad, cumpliendo con las más altas regulaciones mexicanas e
+                    internacionales.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- NOM Card 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
+                        <span class="text-4xl font-bold mb-2 text-green-custom">NOM-001</span>
+                        <p class="text-gray-600 text-center">Garantizamos que todas las instalaciones eléctricas
+                            cumplen con esta norma.</p>
+                    </div>
+
+                    <!-- NOM Card 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
+                        <span class="text-4xl font-bold mb-2 text-green-custom">NOM-010</span>
+                        <p class="text-gray-600 text-center">Implementamos medidas para la manipulación y protección
+                            contra agentes químicos.</p>
+                    </div>
+
+                    <!-- ISO Card 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
+                        <span class="text-4xl font-bold mb-2 text-green-custom">ISO 9001</span>
+                        <p class="text-gray-600 text-center">Nuestros procesos se guían por este estándar de gestión de
+                            calidad.</p>
+                    </div>
+
+                    <!-- ISO Card 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
+                        <span class="text-4xl font-bold mb-2 text-green-custom">ISO 17025</span>
+                        <p class="text-gray-600 text-center">Facilitamos el proceso de acreditación para tu
+                            laboratorio.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-12 md:py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-green-custom">Proyectos Recientes</h2>
+                <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-12">Echa un vistazo a algunos de nuestros
+                    trabajos más destacados.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="bg-gray-100 rounded-xl shadow-md overflow-hidden">
+                        <img src="https://placehold.co/600x400/E5E7EB/2F4858?text=Proyecto+1" alt="Proyecto 1"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2 text-green-custom">Laboratorio de Coca-Cola</h3>
+                            <p class="text-gray-600">Instalación completa de mobiliario y sistemas de extracción.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="bg-gray-100 rounded-xl shadow-md overflow-hidden">
+                        <img src="https://placehold.co/600x400/E5E7EB/2F4858?text=Proyecto+2" alt="Proyecto 2"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2 text-green-custom">Planta de Bimbo</h3>
+                            <p class="text-gray-600">Modernización y mantenimiento de equipos de laboratorio.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="bg-gray-100 rounded-xl shadow-md overflow-hidden">
+                        <img src="https://placehold.co/600x400/E5E7EB/2F4858?text=Proyecto+3" alt="Proyecto 3"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2 text-green-custom">Mantenimiento de PEMEX</h3>
+                            <p class="text-gray-600">Servicios de mantenimiento y obra civil en laboratorios.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-12 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <!-- Contact Info -->
+                    <div class="space-y-6">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-green-custom">Información de Contacto</h2>
+                        <div class="flex items-center space-x-3 text-lg md:text-xl text-gray-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-6 h-6 text-green-custom">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            <span>(28) 7125 2793</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-lg md:text-xl text-gray-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-6 h-6 text-green-custom">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>instalabmx@gmail.com</span>
+                        </div>
+                        <a href="https://www.facebook.com/instal.lab/" target="_blank"
+                            class="btn-custom inline-block mt-4">Visita nuestra página de Facebook</a>
+                    </div>
+                    <!-- Contact Form -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4 text-center text-green-custom">¡Conversemos sobre
+                            tu proyecto!</h3>
+                        <p class="text-center text-gray-600 mb-6">Completa el formulario para iniciar una conversación
+                            sobre tu proyecto. Esto nos permite entender mejor tus necesidades y prepararnos para la
+                            llamada.</p>
+
+                        <form id="contact-form" action="https://formspree.io/f/{{formspree-id}}" method="POST"
+                            class="space-y-4">
+                            <!-- Hidden input to send a reply to address -->
+                            <input type="hidden" name="_replyto">
+
+                            <div>
+                                <label for="company" class="block text-sm font-medium text-gray-700">Nombre de la
+                                    Empresa</label>
+                                <input type="text" id="company" name="company" class="form-input" required>
+                            </div>
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Nombre del
+                                    Contacto</label>
+                                <input type="text" id="name" name="name" class="form-input" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Correo
+                                    Electrónico</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700">Teléfono</label>
+                                <input type="tel" id="phone" name="phone" class="form-input" required>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700">Describe tu
+                                    proyecto</label>
+                                <textarea id="message" name="message" rows="4" class="form-input" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full btn-custom">Enviar Mensaje</button>
+                        </form>
+                        <p id="form-status" class="mt-4 text-center font-semibold"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-green-custom text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <div class="md:flex md:justify-between items-center mb-6">
+                <nav class="flex justify-center md:justify-start space-x-6 text-sm md:text-base mb-4 md:mb-0">
+                    <a href="#about" class="hover:text-gray-300">Nosotros</a>
+                    <a href="#services" class="hover:text-gray-300">Servicios</a>
+                    <a href="#certifications" class="hover:text-gray-300">Certificaciones</a>
+                    <a href="#contact" class="hover:text-gray-300">Contacto</a>
+                </nav>
+                <div class="text-center md:text-right text-sm">
+                    <p>José Francisco Herrera | Técnico Especialista en Instalaciones</p>
+                    <p>Tel: (28) 7125 2793 | Correo: instalabmx@gmail.com</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-sm">
+                <p>&copy; 2025 INSTAL-LAB. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contact-form');
+            const formStatus = document.getElementById('form-status');
+            const formspreeId = form.action.split('/').pop();
+
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault();
+                formStatus.textContent = 'Enviando...';
+                formStatus.style.color = '#315C5E';
+
+                try {
+                    const formData = new FormData(form);
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        headers: {
+                            'Accept': 'application/json'
+                        },
+                        body: formData
+                    });
+
+                    if (response.ok) {
+                        formStatus.textContent = '¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.';
+                        formStatus.style.color = 'green';
+                        form.reset();
+                    } else {
+                        const data = await response.json();
+                        if (Object.hasOwn(data, 'errors')) {
+                            const errorMessages = data.errors.map(error => error.message).join(', ');
+                            formStatus.textContent = `Hubo un problema. Por favor, revisa tu conexión e intenta de nuevo.`;
+                        } else {
+                            formStatus.textContent = 'Hubo un error de red. Por favor, revisa tu conexión e intenta de nuevo.';
+                        }
+                        formStatus.style.color = 'red';
+                    }
+                } catch (error) {
+                    formStatus.textContent = 'Hubo un error de red. Por favor, revisa tu conexión e intenta de nuevo.';
+                    formStatus.style.color = 'red';
+                    console.error('Error submitting form:', error);
+                }
+            });
+
+            // Handle smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
